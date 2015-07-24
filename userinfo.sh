@@ -20,10 +20,12 @@ usuarios(){
  fi
 }
 
+#Muestra ayuda cuando no hay opciones
 if [ "$#" -eq 0 ];then
  ayuda
 fi
- 
+
+#Proceso las opciones 
 while getopts ":sp" opcion;do
  case $opcion in
   s) usuarios s;;
